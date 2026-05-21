@@ -19,8 +19,15 @@ The test functions created should be a “.psm1” file.  I put each function in
 
 How do I get these tests into Icinga2?
 
+First,
+Download and install the Icinga Powershell Framework as well as the Icinga Powershell Plugins
+Unblock the files, for example:
+C:\Program Files\WindowsPowerShell\Modules> Get-ChildItem -path . -Recurse | unblock-file
+
+Then import the modules for both the framework and plugins.
+
 This is where baskets come into play.  First ensure the modules are imported into PowerShell using the Import-Module function.  For my example:
-ImportModule IcingaCustom
+Import-Module IcingaCustom
 
 The basket can be created using this command:
 Get-IcingaCheckCommandConfig -OutDirectory ‘C:\Temp’ 
