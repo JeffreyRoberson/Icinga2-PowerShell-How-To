@@ -20,8 +20,10 @@ The test functions created should be a “.psm1” file.  I put each function in
 How do I get these tests into Icinga2?
 
 First,
-Download and install the Icinga Powershell Framework as well as the Icinga Powershell Plugins
+Download and install the Icinga Powershell Framework as well as the Icinga Powershell Plugins from https://packages.icinga.com/IcingaForWindows/stable
+
 Unblock the files, for example:
+
 C:\Program Files\WindowsPowerShell\Modules> Get-ChildItem -path . -Recurse | unblock-file
 
 Then import the modules for both the framework and plugins.
